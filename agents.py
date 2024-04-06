@@ -1,7 +1,9 @@
 import requests
+import streamlit as st
 
 API_URL = 'https://api-inference.huggingface.co/models/google/gemma-7b-it'
-API_TOKEN = '<YOUR 🤗 TOKEN>'
+API_TOKEN = st.secrets['HF_API_TOKEN'] # Or you can replace this with your 🤗 token
+
 
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
 
